@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerbang Logika-IF-Loop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2 class="mb-4">Perulangan For Dari 10 - 0</h2>
+
+    <button onclick="mulai()">Mulai Perulangan</button>
+    <p id="output"></p> 
+    <script>
+    function mulai(){
+        let output = "";
+        for(let i = 10; i >= 0; i-=1){
+            output += "Perulangan ke" + i +"<br>";
+            document.getElementById("output").innerHTML = output;
+        }
+    }
+    </script><br><br><br>
+    <h2 class="mb-4">Gerbang Logika dengan IF Statement</h2>
+    <p>NilaiA = True<br>NilaiB = False</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Hasil Logika AND</h3>
+            <div id="logikaAnd"></div>
+        </div>
+        <div class="col-md-6">
+            <h3>Hasil Logika OR</h3>
+            <div id="logikaOr"></div>
+        </div>
+        <div class="col-md-6 mt-4">
+            <h3>Hasil Logika NOT</h3>
+            <div id="logikaNot"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        let nilaiA = true;
+        let nilaiB = false;
+
+        if (nilaiA && nilaiB) {
+            document.getElementById("logikaAnd").innerHTML = "Kedua nilai adalah true (AND)";
+        } else {
+            document.getElementById("logikaAnd").innerHTML = "Salah satu atau kedua nilai adalah false (AND)";
+        }
+
+        if (nilaiA || nilaiB) {
+            document.getElementById("logikaOr").innerHTML = "Salah satu dari nilai adalah true (OR)";
+        } else {
+            document.getElementById("logikaOr").innerHTML = "Kedua nilai adalah false (OR)";
+        }
+
+        if (!nilaiA) {
+            document.getElementById("logikaNot").innerHTML = "Nilai A adalah false (NOT)";
+        } else {
+            document.getElementById("logikaNot").innerHTML = "Nilai A adalah true (NOT)";
+        }
+    </script>
+    <script>
+        var continueInput = true;
+        while (continueInput) {
+            var userInput = prompt("Ini Adalah While Loop (ketik 'stop' untuk berhenti):");
+
+            if (userInput.toLowerCase() === "stop") {
+                continueInput = false;
+            }
+        }
+    </script><br><br><br>
+</body>
+</html>
