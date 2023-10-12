@@ -6,23 +6,16 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-image: url("mac.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: white;
 }
 h2 {
     margin-bottom: 20px;
-    color: white;
 }
 button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    color: white;
 }
 #output {
     margin-top: 20px;
     font-size: 18px;
-    color: white;
 }
